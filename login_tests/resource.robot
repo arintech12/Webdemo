@@ -22,25 +22,32 @@ Open Browser To Login Page
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
+    Sleep    2s
 
 Login Page Should Be Open
     Title Should Be    Login Page
+    Sleep    2s
 
 Go To Login Page
     Go To    ${LOGIN URL}
     Login Page Should Be Open
+    Sleep    2s
 
 Input Username
     [Arguments]    ${username}
     Input Text    username_field    ${username}
+    Sleep    2s
 
 Input Password
     [Arguments]    ${password}
     Input Text    password_field    ${password}
+    Sleep    2s
 
 Submit Credentials
     Click Button    login_button
+    Sleep    2s
 
 Welcome Page Should Be Open
     Location Should Be    ${WELCOME URL}
     Title Should Be    Welcome Page
+    Sleep    2s
