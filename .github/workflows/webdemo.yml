@@ -1,5 +1,4 @@
 name: Desktop App Robot Test
-
 on:
   push:
     branches: [ master ]
