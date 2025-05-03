@@ -1,0 +1,22 @@
+name: Desktop App Robot Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  robot-tests:
+    runs-on: [self-hosted]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Install requiremets
+        run: pip install -r requirements.txt
+
+      - name: Run application
+        run: python demoapp/server.py
+      
+      - name: Run Robot Framework tests
+        run: robot login_tests
