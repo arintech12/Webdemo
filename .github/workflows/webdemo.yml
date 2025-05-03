@@ -16,7 +16,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run application
-        run: python demoapp/server.py
+        run: python demoapp/server.py &
       
       - name: Run Robot Framework tests
         run: robot login_tests
