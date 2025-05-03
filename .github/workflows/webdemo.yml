@@ -2,6 +2,7 @@ name: Desktop App Robot Test
 on:
   push:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   robot-tests:
